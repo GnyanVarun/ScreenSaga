@@ -41,15 +41,29 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+
+	<!-- URL Scheme for custom launching -->
 	<key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>screensaga</string>
-        </array>
-      </dict>
-    </array>
+	<array>
+	  <dict>
+	    <key>CFBundleURLSchemes</key>
+	    <array>
+	      <string>screensaga</string>
+	    </array>
+	  </dict>
+	</array>
+
+	<!-- Notifications Support -->
+	<key>NSUserNotificationAlertStyle</key>
+	<string>banner</string>
+	<key>UIBackgroundModes</key>
+	<array>
+	  <string>remote-notification</string>
+	</array>
+	<key>UNUserNotificationCenter</key>
+	<true/>
+
+	<!-- Optional Performance Tuning -->
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
