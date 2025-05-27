@@ -44,8 +44,15 @@ android {
             signingConfig = signingConfigs.debug
         }
     }
-}
 
-flutter {
-    source = "../.."
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "screensaga-${variant.buildType.name}.apk"
+
+        }
+
+        flutter {
+            source = "../.."
+        }
+    }
 }
