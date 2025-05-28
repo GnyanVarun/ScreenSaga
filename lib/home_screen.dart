@@ -11,6 +11,7 @@ import 'content_search_delegate.dart';
 import 'trending_screen.dart';
 import 'watchlist_screen.dart';
 import 'collection_screen.dart';
+import 'dart:io' show Platform;
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -215,7 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         SizedBox(
-          height: 250,
+          height: Platform.isWindows ? 360 : 300,
           child: isLoading
               ? ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -258,7 +259,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 'https://image.tmdb.org/t/p/w500${item['poster_path']}',
                 fit: BoxFit.cover,
                 width: double.infinity,
-                height: 250,
+                height: Platform.isWindows ? 360 : 300,
               ),
               Positioned(
                 bottom: 0,
