@@ -216,7 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         SizedBox(
-          height: Platform.isWindows ? 360 : 300,
+          height: Platform.isWindows ? 500 : 350,
           child: isLoading
               ? ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -259,7 +259,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 'https://image.tmdb.org/t/p/w500${item['poster_path']}',
                 fit: BoxFit.cover,
                 width: double.infinity,
-                height: Platform.isWindows ? 360 : 300,
+                height: Platform.isWindows ? 500 : 350,
               ),
               Positioned(
                 bottom: 0,
